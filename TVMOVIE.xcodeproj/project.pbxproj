@@ -16,6 +16,14 @@
 		02B9B3312BD27D21001E8810 /* TVMOVIETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3302BD27D21001E8810 /* TVMOVIETests.swift */; };
 		02B9B33B2BD27D21001E8810 /* TVMOVIEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B33A2BD27D21001E8810 /* TVMOVIEUITests.swift */; };
 		02B9B33D2BD27D21001E8810 /* TVMOVIEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B33C2BD27D21001E8810 /* TVMOVIEUITestsLaunchTests.swift */; };
+		02B9B34B2BD27DC5001E8810 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 02B9B34A2BD27DC5001E8810 /* Kingfisher */; };
+		02B9B34E2BD27E61001E8810 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02B9B34D2BD27E61001E8810 /* SnapKit */; };
+		02B9B3512BD28055001E8810 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 02B9B3502BD28055001E8810 /* RxCocoa */; };
+		02B9B3532BD28055001E8810 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02B9B3522BD28055001E8810 /* RxSwift */; };
+		02B9B3562BD280F2001E8810 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 02B9B3552BD280F2001E8810 /* RxAlamofire */; };
+		02B9B3592BD64EA7001E8810 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3582BD64EA7001E8810 /* Const.swift */; };
+		02B9B35C2BD6757F001E8810 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B35B2BD6757F001E8810 /* TV.swift */; };
+		02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B35D2BD67B33001E8810 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,9 @@
 		02B9B3362BD27D21001E8810 /* TVMOVIEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMOVIEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B9B33A2BD27D21001E8810 /* TVMOVIEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMOVIEUITests.swift; sourceTree = "<group>"; };
 		02B9B33C2BD27D21001E8810 /* TVMOVIEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMOVIEUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02B9B3582BD64EA7001E8810 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		02B9B35B2BD6757F001E8810 /* TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
+		02B9B35D2BD67B33001E8810 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B9B3512BD28055001E8810 /* RxCocoa in Frameworks */,
+				02B9B34B2BD27DC5001E8810 /* Kingfisher in Frameworks */,
+				02B9B3532BD28055001E8810 /* RxSwift in Frameworks */,
+				02B9B3562BD280F2001E8810 /* RxAlamofire in Frameworks */,
+				02B9B34E2BD27E61001E8810 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +115,7 @@
 		02B9B3182BD27D20001E8810 /* TVMOVIE */ = {
 			isa = PBXGroup;
 			children = (
+				02B9B3572BD64E92001E8810 /* Network */,
 				02B9B3192BD27D20001E8810 /* AppDelegate.swift */,
 				02B9B31B2BD27D20001E8810 /* SceneDelegate.swift */,
 				02B9B31D2BD27D20001E8810 /* ViewController.swift */,
@@ -127,6 +144,24 @@
 			path = TVMOVIEUITests;
 			sourceTree = "<group>";
 		};
+		02B9B3572BD64E92001E8810 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				02B9B3582BD64EA7001E8810 /* Const.swift */,
+				02B9B35A2BD6756E001E8810 /* Entities */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		02B9B35A2BD6756E001E8810 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				02B9B35B2BD6757F001E8810 /* TV.swift */,
+				02B9B35D2BD67B33001E8810 /* Movie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +178,13 @@
 			dependencies = (
 			);
 			name = TVMOVIE;
+			packageProductDependencies = (
+				02B9B34A2BD27DC5001E8810 /* Kingfisher */,
+				02B9B34D2BD27E61001E8810 /* SnapKit */,
+				02B9B3502BD28055001E8810 /* RxCocoa */,
+				02B9B3522BD28055001E8810 /* RxSwift */,
+				02B9B3552BD280F2001E8810 /* RxAlamofire */,
+			);
 			productName = TVMOVIE;
 			productReference = 02B9B3162BD27D20001E8810 /* TVMOVIE.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +257,12 @@
 				Base,
 			);
 			mainGroup = 02B9B30D2BD27D20001E8810;
+			packageReferences = (
+				02B9B3492BD27DC5001E8810 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				02B9B34C2BD27E61001E8810 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				02B9B34F2BD28055001E8810 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				02B9B3542BD280F2001E8810 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+			);
 			productRefGroup = 02B9B3172BD27D20001E8810 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				02B9B31E2BD27D20001E8810 /* ViewController.swift in Sources */,
+				02B9B3592BD64EA7001E8810 /* Const.swift in Sources */,
+				02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */,
 				02B9B31A2BD27D20001E8810 /* AppDelegate.swift in Sources */,
+				02B9B35C2BD6757F001E8810 /* TV.swift in Sources */,
 				02B9B31C2BD27D20001E8810 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +652,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		02B9B3492BD27DC5001E8810 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		02B9B34C2BD27E61001E8810 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		02B9B34F2BD28055001E8810 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		02B9B3542BD280F2001E8810 /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02B9B34A2BD27DC5001E8810 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B9B3492BD27DC5001E8810 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		02B9B34D2BD27E61001E8810 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B9B34C2BD27E61001E8810 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		02B9B3502BD28055001E8810 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B9B34F2BD28055001E8810 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		02B9B3522BD28055001E8810 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B9B34F2BD28055001E8810 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		02B9B3552BD280F2001E8810 /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B9B3542BD280F2001E8810 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02B9B30E2BD27D20001E8810 /* Project object */;
 }

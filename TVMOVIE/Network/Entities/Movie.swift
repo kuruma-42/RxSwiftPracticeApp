@@ -7,6 +7,22 @@
 
 import Foundation
 
+struct MovieListModel: Decodable {
+    let page: Int
+    let results: [Movie]
+    
+    enum CodingKeys: CodingKey {
+        case page
+        case results
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.page = try container.decode(Int.self, forKey: .page)
+        self.results = try container.decode([Movie].self, forKey: .results)
+    }
+}
+
 struct Movie: Decodable {
     let title: String
     let overview: String

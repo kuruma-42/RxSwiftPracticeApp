@@ -6,6 +6,24 @@
 //
 
 import Foundation
+
+struct TVListModel: Decodable {
+    let page: Int
+    let results: [TV]
+    
+    enum CodingKeys: CodingKey {
+        case page
+        case results
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.page = try container.decode(Int.self, forKey: .page)
+        self.results = try container.decode([TV].self, forKey: .results)
+    }
+}
+
+
 struct TV: Decodable {
     let name: String
     let overview: String

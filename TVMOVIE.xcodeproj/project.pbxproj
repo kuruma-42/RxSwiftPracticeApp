@@ -26,6 +26,9 @@
 		02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B35D2BD67B33001E8810 /* Movie.swift */; };
 		02B9B3602BD681EF001E8810 /* MovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B35F2BD681EF001E8810 /* MovieResults.swift */; };
 		02B9B3A02BDA2D24001E8810 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B39F2BDA2D24001E8810 /* Network.swift */; };
+		02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A12BDA3453001E8810 /* TVNetwork.swift */; };
+		02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A32BDA3692001E8810 /* MovieNetwork.swift */; };
+		02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A52BDA398E001E8810 /* NetworkProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		02B9B35D2BD67B33001E8810 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		02B9B35F2BD681EF001E8810 /* MovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResults.swift; sourceTree = "<group>"; };
 		02B9B39F2BDA2D24001E8810 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		02B9B3A12BDA3453001E8810 /* TVNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVNetwork.swift; sourceTree = "<group>"; };
+		02B9B3A32BDA3692001E8810 /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
+		02B9B3A52BDA398E001E8810 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,9 @@
 				02B9B3582BD64EA7001E8810 /* Const.swift */,
 				02B9B35A2BD6756E001E8810 /* Entities */,
 				02B9B39F2BDA2D24001E8810 /* Network.swift */,
+				02B9B3A12BDA3453001E8810 /* TVNetwork.swift */,
+				02B9B3A32BDA3692001E8810 /* MovieNetwork.swift */,
+				02B9B3A52BDA398E001E8810 /* NetworkProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -315,8 +324,11 @@
 				02B9B3602BD681EF001E8810 /* MovieResults.swift in Sources */,
 				02B9B31E2BD27D20001E8810 /* ViewController.swift in Sources */,
 				02B9B3A02BDA2D24001E8810 /* Network.swift in Sources */,
+				02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */,
 				02B9B3592BD64EA7001E8810 /* Const.swift in Sources */,
+				02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */,
 				02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */,
+				02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */,
 				02B9B31A2BD27D20001E8810 /* AppDelegate.swift in Sources */,
 				02B9B35C2BD6757F001E8810 /* TV.swift in Sources */,
 				02B9B31C2BD27D20001E8810 /* SceneDelegate.swift in Sources */,

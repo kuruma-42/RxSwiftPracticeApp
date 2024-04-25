@@ -6,6 +6,8 @@
 //
 
 import Foundation
-//struct MovieResults {
-//    let upcom
-//}
+struct MovieResult {
+    let upcoming: MovieListModel
+    let popular: MovieListModel
+    let nowPlaying: MovieListModel
+}

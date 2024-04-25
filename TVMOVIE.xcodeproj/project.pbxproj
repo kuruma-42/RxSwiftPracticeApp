@@ -30,6 +30,7 @@
 		02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A32BDA3692001E8810 /* MovieNetwork.swift */; };
 		02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A52BDA398E001E8810 /* NetworkProvider.swift */; };
 		02B9B3A82BDA3D74001E8810 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A72BDA3D74001E8810 /* ButtonView.swift */; };
+		02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A92BDA57D2001E8810 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		02B9B3A32BDA3692001E8810 /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
 		02B9B3A52BDA398E001E8810 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		02B9B3A72BDA3D74001E8810 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		02B9B3A92BDA57D2001E8810 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				02B9B31B2BD27D20001E8810 /* SceneDelegate.swift */,
 				02B9B31D2BD27D20001E8810 /* ViewController.swift */,
 				02B9B3A72BDA3D74001E8810 /* ButtonView.swift */,
+				02B9B3A92BDA57D2001E8810 /* ViewModel.swift */,
 				02B9B31F2BD27D20001E8810 /* Main.storyboard */,
 				02B9B3222BD27D21001E8810 /* Assets.xcassets */,
 				02B9B3242BD27D21001E8810 /* LaunchScreen.storyboard */,
@@ -330,6 +333,7 @@
 				02B9B3A02BDA2D24001E8810 /* Network.swift in Sources */,
 				02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */,
 				02B9B3592BD64EA7001E8810 /* Const.swift in Sources */,
+				02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */,
 				02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */,
 				02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */,
 				02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */,

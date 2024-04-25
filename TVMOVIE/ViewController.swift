@@ -59,6 +59,10 @@ class ViewController: UIViewController {
         buttonView.tvButton.rx.tap.bind { [weak self] in
             self?.tvTrigger.onNext(Void())
         }.disposed(by: disposeBag)
+        
+        buttonView.movieButton.rx.tap.bind { [weak self] in
+            self?.movieTrigger.onNext(Void())
+        }.disposed(by: disposeBag)
     }
 }
 

@@ -28,3 +28,5 @@ class Network<T:Decodable> {
             }
     }
 }
+
+//endpoint = "https://api.themoviedb.org/3"

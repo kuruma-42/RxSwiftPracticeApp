@@ -13,7 +13,7 @@ final class NetworkProvider {
     private let endpoint: String
     
     init(endpoint: String) {
-        self.endpoint = endpoint
+        self.endpoint = "https://api.themoviedb.org/3"
     }
     
     func makeTVNetwork() -> TVNetwork {

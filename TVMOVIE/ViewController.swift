@@ -25,8 +25,7 @@ class ViewController: UIViewController {
         setUI()
         bindViewModel()
         bindView()
-        
-        tvTrigger.onNext(Void())
+        tvTrigger.onNext(())
     }
     
     private func setUI() {
@@ -52,6 +51,10 @@ class ViewController: UIViewController {
         
         _ = output.tvList.bind { tvList in
             print(tvList)
+        }.disposed(by: disposeBag)
+        
+        _ = output.movieList.bind { movieList in
+            print(movieList)
         }.disposed(by: disposeBag)
     }
     

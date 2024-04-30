@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
         collectionView.register(NormalCollectionViewCell.self, forCellWithReuseIdentifier: NormalCollectionViewCell.id)
         collectionView.register(BigImageCollectionViewCell.self, forCellWithReuseIdentifier: BigImageCollectionViewCell.id)
+        collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.id)
         return collectionView
     }()
     let viewModel = ViewModel()
@@ -54,7 +55,6 @@ class ViewController: UIViewController {
     private func setUI() {
         view.addSubview(buttonView)
         view.addSubview(collectionView)
-        
         
         buttonView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)

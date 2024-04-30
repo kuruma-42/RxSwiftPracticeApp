@@ -20,16 +20,6 @@ final class BigImageCollectionViewCell: UICollectionViewCell {
         return stackView
     }()
     
-    
-    
-    
-//    private let image: UIImageView = {
-//        let image = UIImageView()
-//        image.clipsToBounds = true
-//        image.layer.cornerRadius = 8
-//        return image
-//    }()
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20, weight: .bold)

@@ -34,6 +34,7 @@
 		02B9B3AD2BDCCC47001E8810 /* NormalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */; };
 		02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AE2BE0F564001E8810 /* Content.swift */; };
 		02B9B3B12BE0FA45001E8810 /* BigImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */; };
+		02B9B3B32BE10BFC001E8810 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCollectionViewCell.swift; sourceTree = "<group>"; };
 		02B9B3AE2BE0F564001E8810 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			children = (
 				02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */,
 				02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */,
+				02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */,
 				02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */,
 				02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */,
+				02B9B3B32BE10BFC001E8810 /* ListCollectionViewCell.swift in Sources */,
 				02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */,
 				02B9B31A2BD27D20001E8810 /* AppDelegate.swift in Sources */,
 				02B9B35C2BD6757F001E8810 /* TV.swift in Sources */,

@@ -23,7 +23,7 @@ struct MovieListModel: Decodable {
     }
 }
 
-struct Movie: Decodable {
+struct Movie: Decodable, Hashable {
     let title: String
     let overview: String
     let posterURL: String

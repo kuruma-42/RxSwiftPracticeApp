@@ -32,6 +32,7 @@
 		02B9B3A82BDA3D74001E8810 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A72BDA3D74001E8810 /* ButtonView.swift */; };
 		02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A92BDA57D2001E8810 /* ViewModel.swift */; };
 		02B9B3AD2BDCCC47001E8810 /* NormalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */; };
+		02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AE2BE0F564001E8810 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		02B9B3A72BDA3D74001E8810 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		02B9B3A92BDA57D2001E8810 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCollectionViewCell.swift; sourceTree = "<group>"; };
+		02B9B3AE2BE0F564001E8810 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				02B9B35B2BD6757F001E8810 /* TV.swift */,
 				02B9B35D2BD67B33001E8810 /* Movie.swift */,
 				02B9B35F2BD681EF001E8810 /* MovieResults.swift */,
+				02B9B3AE2BE0F564001E8810 /* Content.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */,
 				02B9B3592BD64EA7001E8810 /* Const.swift in Sources */,
 				02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */,
+				02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */,
 				02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */,
 				02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */,
 				02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */,

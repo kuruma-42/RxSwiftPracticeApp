@@ -35,6 +35,7 @@
 		02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AE2BE0F564001E8810 /* Content.swift */; };
 		02B9B3B12BE0FA45001E8810 /* BigImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */; };
 		02B9B3B32BE10BFC001E8810 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */; };
+		02B9B3B52BE11749001E8810 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B42BE11749001E8810 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		02B9B3AE2BE0F564001E8810 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		02B9B3B42BE11749001E8810 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				02B9B3222BD27D21001E8810 /* Assets.xcassets */,
 				02B9B3242BD27D21001E8810 /* LaunchScreen.storyboard */,
 				02B9B3272BD27D21001E8810 /* Info.plist */,
+				02B9B3B42BE11749001E8810 /* HeaderView.swift */,
 			);
 			path = TVMOVIE;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02B9B3602BD681EF001E8810 /* MovieResults.swift in Sources */,
+				02B9B3B52BE11749001E8810 /* HeaderView.swift in Sources */,
 				02B9B31E2BD27D20001E8810 /* ViewController.swift in Sources */,
 				02B9B3A82BDA3D74001E8810 /* ButtonView.swift in Sources */,
 				02B9B3AD2BDCCC47001E8810 /* NormalCollectionViewCell.swift in Sources */,

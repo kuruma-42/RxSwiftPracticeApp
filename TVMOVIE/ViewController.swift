@@ -22,6 +22,7 @@ enum Item: Hashable {
 
 class ViewController: UIViewController {
     let disposeBag = DisposeBag()
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Item>?
     let buttonView = ButtonView()
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUI()
+        setDataSource()
         bindViewModel()
         bindView()
         tvTrigger.onNext(())
@@ -47,7 +49,6 @@ class ViewController: UIViewController {
         view.addSubview(buttonView)
         view.addSubview(collectionView)
         
-        collectionView.backgroundColor = .blue
         
         buttonView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
@@ -61,11 +62,17 @@ class ViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        let input = ViewModel.Input(tvTrigger: tvTrigger, movieTrigger: movieTrigger)
+        let input = ViewModel.Input(tvTrigger: tvTrigger.asObservable(), movieTrigger: movieTrigger.asObservable())
         let output = viewModel.transform(input: input)
         
-        _ = output.tvList.bind { tvList in
+        _ = output.tvList.bind {[weak self] tvList in
             print(tvList)
+            var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+            let items = tvList.map { return Item.normal($0) }
+            let section = Section.double
+            snapshot.appendSections([section])
+            snapshot.appendItems(items, toSection: section)
+            self?.dataSource?.apply(snapshot)
         }.disposed(by: disposeBag)
         
         _ = output.movieList.bind { movieList in
@@ -95,12 +102,23 @@ class ViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 8, trailing: 4)
-        
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(320))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
-        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
         let section = NSCollectionLayoutSection(group: group)
         return section
+    }
+    
+    private func setDataSource() {
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+            
+            switch item {
+            case .normal(let tvData):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NormalCollectionViewCell.id, for: indexPath) as? NormalCollectionViewCell
+                cell?.configuration(title: tvData.name, review: tvData.vote, desc: tvData.overview, imageURL: tvData.posterURL)
+                return cell
+            }
+    
+        })
     }
 }
 

@@ -44,6 +44,7 @@ class NormalCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUI()
     }
     
     
@@ -59,18 +60,18 @@ class NormalCollectionViewCell: UICollectionViewCell {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(8)
+            make.leading.trailing.equalTo(8)
             make.top.equalTo(image.snp.bottom).offset(8)
         }
         
         reviewLabel.snp.makeConstraints { make in
-            make.top.equalTo(image.snp.bottom).offset(8)
-            make.top.leading.trailing.equalTo(8)
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalTo(8)
         }
         
         descLabel.snp.makeConstraints { make in
             make.top.equalTo(reviewLabel.snp.bottom).offset(8)
-            make.top.leading.trailing.equalTo(8)
+            make.leading.trailing.equalTo(8)
         }
     }
     

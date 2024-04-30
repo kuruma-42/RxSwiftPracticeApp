@@ -33,6 +33,7 @@
 		02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3A92BDA57D2001E8810 /* ViewModel.swift */; };
 		02B9B3AD2BDCCC47001E8810 /* NormalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */; };
 		02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3AE2BE0F564001E8810 /* Content.swift */; };
+		02B9B3B12BE0FA45001E8810 /* BigImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		02B9B3A92BDA57D2001E8810 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCollectionViewCell.swift; sourceTree = "<group>"; };
 		02B9B3AE2BE0F564001E8810 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */,
+				02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				02B9B3AD2BDCCC47001E8810 /* NormalCollectionViewCell.swift in Sources */,
 				02B9B3A02BDA2D24001E8810 /* Network.swift in Sources */,
 				02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */,
+				02B9B3B12BE0FA45001E8810 /* BigImageCollectionViewCell.swift in Sources */,
 				02B9B3592BD64EA7001E8810 /* Const.swift in Sources */,
 				02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */,
 				02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */,

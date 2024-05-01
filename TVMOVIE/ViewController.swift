@@ -159,9 +159,12 @@ class ViewController: UIViewController {
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .absolute(320))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
-        
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(44))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+        section.boundarySupplementaryItems = [header]
         return section
         
     }
@@ -186,6 +189,19 @@ class ViewController: UIViewController {
             }
     
         })
+        
+        dataSource?.supplementaryViewProvider = { [weak self]collectionView, kind, indexPath -> UICollectionReusableView in
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderView.id, for: indexPath)
+            let section = self?.dataSource?.sectionIdentifier(for: indexPath.section)
+            
+             switch section {
+            case .horizontal(let title):
+                (header as? HeaderView)?.configure(title: title)
+            default:
+                print("Default")
+            }
+            return header
+        }
     }
 }
 

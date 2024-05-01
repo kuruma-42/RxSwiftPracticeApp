@@ -82,8 +82,24 @@ class ViewController: UIViewController {
             self?.dataSource?.apply(snapshot)
         }.disposed(by: disposeBag)
         
-        _ = output.movieList.bind { movieList in
-            print(movieList)
+        _ = output.movieResult.bind { [weak self] movieResult in
+            print(movieResult)
+            var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+            let bigImageList = movieResult.nowPlaying.results.map { movie in
+                return Item.bigImage(movie)
+            }
+            let bannerSection = Section.banner
+            snapshot.appendSections([bannerSection])
+            snapshot.appendItems(bigImageList, toSection: bannerSection)
+            
+            let horizontalSection = Section.horizontal("Popular Movies")
+            let normalList = movieResult.popular.results.map { movie in
+                return Item.normal(Content(movie: movie))
+            }
+            snapshot.appendSections([horizontalSection])
+            snapshot.appendItems(normalList, toSection: horizontalSection)
+            
+            self?.dataSource?.apply(snapshot)
         }.disposed(by: disposeBag)
     }
     
@@ -119,7 +135,7 @@ class ViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 4, bottom: 8, trailing: 4)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(640))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(300))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
         let section = NSCollectionLayoutSection(group: group)
         return section
@@ -129,7 +145,7 @@ class ViewController: UIViewController {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(300))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(640))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
         let section = NSCollectionLayoutSection(group: group)
@@ -140,7 +156,7 @@ class ViewController: UIViewController {
     private func createHorizontalSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .absolute(320))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         
@@ -157,6 +173,15 @@ class ViewController: UIViewController {
             case .normal(let contentData):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NormalCollectionViewCell.id, for: indexPath) as? NormalCollectionViewCell
                 cell?.configuration(title: contentData.title, review: contentData.vote, desc: contentData.overview, imageURL: contentData.posterURL)
+                return cell
+                
+            case .bigImage(let movieData):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigImageCollectionViewCell.id, for: indexPath) as? BigImageCollectionViewCell
+                cell?.configure(title: movieData.title, overview: movieData.overview, review: movieData.vote, imageURL: movieData.posterURL)
+                return cell
+            case .list(let movieData):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigImageCollectionViewCell.id, for: indexPath) as? BigImageCollectionViewCell
+                cell?.configure(title: movieData.title, overview: movieData.overview, review: movieData.vote, imageURL: movieData.posterURL)
                 return cell
             }
     

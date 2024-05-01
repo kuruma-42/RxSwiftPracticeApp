@@ -26,7 +26,7 @@ class ViewModel {
     
     struct Output {
         let tvList: Observable<[TV]>
-        let movieList: Observable<MovieResult>
+        let movieResult: Observable<MovieResult>
     }
     
     func transform(input: Input) -> Output {
@@ -47,6 +47,6 @@ class ViewModel {
                 
             }
         }
-        return Output(tvList: tvList, movieList: movieResult)
+        return Output(tvList: tvList, movieResult: movieResult)
     }
 }

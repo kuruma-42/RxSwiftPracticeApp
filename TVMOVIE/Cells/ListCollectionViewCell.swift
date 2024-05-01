@@ -61,7 +61,7 @@ final class ListCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private func configure(title: String, releaseDate: String, URLImage: String) {
+    public func configure(title: String, releaseDate: String, URLImage: String) {
         image.kf.setImage(with: URL(string: URLImage))
         titleLabel.text = title
         releaseDateLabel.text = releaseDate

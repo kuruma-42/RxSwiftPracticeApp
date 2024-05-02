@@ -82,31 +82,37 @@ class ViewController: UIViewController {
             self?.dataSource?.apply(snapshot)
         }.disposed(by: disposeBag)
         
-        _ = output.movieResult.bind { [weak self] movieResult in
-            print(movieResult)
-            var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-            let bigImageList = movieResult.nowPlaying.results.map { movie in
-                return Item.bigImage(movie)
+        _ = output.movieResult.bind { [weak self] result in
+            print(result)
+            switch result {
+            case .success(let movieResult):
+                var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+                let bigImageList = movieResult.nowPlaying.results.map { movie in
+                    return Item.bigImage(movie)
+                }
+                let bannerSection = Section.banner
+                snapshot.appendSections([bannerSection])
+                snapshot.appendItems(bigImageList, toSection: bannerSection)
+                
+                let horizontalSection = Section.horizontal("Popular Movies")
+                let normalList = movieResult.popular.results.map { movie in
+                    return Item.normal(Content(movie: movie))
+                }
+                snapshot.appendSections([horizontalSection])
+                snapshot.appendItems(normalList, toSection: horizontalSection)
+                
+                let listSection = Section.vertical("Upcoming Movies")
+                let upcomingList = movieResult.upcoming.results.map { movie in
+                    return Item.list(movie)
+                }
+                snapshot.appendSections([listSection])
+                snapshot.appendItems(upcomingList, toSection: listSection)
+                
+                self?.dataSource?.apply(snapshot)
+            case .failure(let error):
+                // toast dialog 노출
+                print(error)
             }
-            let bannerSection = Section.banner
-            snapshot.appendSections([bannerSection])
-            snapshot.appendItems(bigImageList, toSection: bannerSection)
-            
-            let horizontalSection = Section.horizontal("Popular Movies")
-            let normalList = movieResult.popular.results.map { movie in
-                return Item.normal(Content(movie: movie))
-            }
-            snapshot.appendSections([horizontalSection])
-            snapshot.appendItems(normalList, toSection: horizontalSection)
-            
-            let listSection = Section.vertical("Upcoming Movies")
-            let upcomingList = movieResult.upcoming.results.map { movie in
-                return Item.list(movie)
-            }
-            snapshot.appendSections([listSection])
-            snapshot.appendItems(upcomingList, toSection: listSection)
-            
-            self?.dataSource?.apply(snapshot)
         }.disposed(by: disposeBag)
     }
     

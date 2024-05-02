@@ -38,6 +38,7 @@
 		02B9B3B52BE11749001E8810 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B42BE11749001E8810 /* HeaderView.swift */; };
 		02B9B3B82BE39CC4001E8810 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B72BE39CC4001E8810 /* ReviewViewController.swift */; };
 		02B9B3BA2BE3A92B001E8810 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B92BE3A92B001E8810 /* Review.swift */; };
+		02B9B3BC2BE3B3D4001E8810 /* ReviewNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3BB2BE3B3D4001E8810 /* ReviewNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		02B9B3B42BE11749001E8810 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		02B9B3B72BE39CC4001E8810 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		02B9B3B92BE3A92B001E8810 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		02B9B3BB2BE3B3D4001E8810 /* ReviewNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				02B9B3A12BDA3453001E8810 /* TVNetwork.swift */,
 				02B9B3A32BDA3692001E8810 /* MovieNetwork.swift */,
 				02B9B3A52BDA398E001E8810 /* NetworkProvider.swift */,
+				02B9B3BB2BE3B3D4001E8810 /* ReviewNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				02B9B3602BD681EF001E8810 /* MovieResults.swift in Sources */,
 				02B9B3B52BE11749001E8810 /* HeaderView.swift in Sources */,
 				02B9B3B82BE39CC4001E8810 /* ReviewViewController.swift in Sources */,
+				02B9B3BC2BE3B3D4001E8810 /* ReviewNetwork.swift in Sources */,
 				02B9B31E2BD27D20001E8810 /* ViewController.swift in Sources */,
 				02B9B3A82BDA3D74001E8810 /* ButtonView.swift in Sources */,
 				02B9B3BA2BE3A92B001E8810 /* Review.swift in Sources */,

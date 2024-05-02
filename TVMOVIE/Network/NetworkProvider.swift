@@ -27,4 +27,11 @@ final class NetworkProvider {
                                               queue: ConcurrentDispatchQueueScheduler(qos: .background))
         return MovieNetwork(network: network)
     }
+    
+    
+    func makeReviewNetwork() -> ReviewNetwork {
+        let network = Network<ReviewListModel>(endpoint: endpoint, queue: ConcurrentDispatchQueueScheduler(qos: .background))
+        
+        return ReviewNetwork(network: network)
+    }
 }

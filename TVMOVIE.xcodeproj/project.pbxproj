@@ -37,6 +37,7 @@
 		02B9B3B32BE10BFC001E8810 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */; };
 		02B9B3B52BE11749001E8810 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B42BE11749001E8810 /* HeaderView.swift */; };
 		02B9B3B82BE39CC4001E8810 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B72BE39CC4001E8810 /* ReviewViewController.swift */; };
+		02B9B3BA2BE3A92B001E8810 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B92BE3A92B001E8810 /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		02B9B3B42BE11749001E8810 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		02B9B3B72BE39CC4001E8810 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		02B9B3B92BE3A92B001E8810 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				02B9B35D2BD67B33001E8810 /* Movie.swift */,
 				02B9B35F2BD681EF001E8810 /* MovieResults.swift */,
 				02B9B3AE2BE0F564001E8810 /* Content.swift */,
+				02B9B3B92BE3A92B001E8810 /* Review.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				02B9B3B82BE39CC4001E8810 /* ReviewViewController.swift in Sources */,
 				02B9B31E2BD27D20001E8810 /* ViewController.swift in Sources */,
 				02B9B3A82BDA3D74001E8810 /* ButtonView.swift in Sources */,
+				02B9B3BA2BE3A92B001E8810 /* Review.swift in Sources */,
 				02B9B3AD2BDCCC47001E8810 /* NormalCollectionViewCell.swift in Sources */,
 				02B9B3A02BDA2D24001E8810 /* Network.swift in Sources */,
 				02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */,

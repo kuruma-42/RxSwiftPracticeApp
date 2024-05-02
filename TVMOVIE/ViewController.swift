@@ -124,6 +124,21 @@ class ViewController: UIViewController {
         buttonView.movieButton.rx.tap.bind { [weak self] in
             self?.movieTrigger.onNext(Void())
         }.disposed(by: disposeBag)
+        
+        collectionView.rx.itemSelected.bind { [weak self] indexPath in
+            print(indexPath)
+            let item = self?.dataSource?.itemIdentifier(for: indexPath)
+            switch item {
+            case .normal(let content):
+                let navigationController = UINavigationController()
+                let viewController = ReviewViewController(id: content.id, contentType: content.type)
+                navigationController.viewControllers = [viewController]
+                self?.present(navigationController, animated: true)
+                print(content)
+            default:
+                print("default")
+            }
+        }
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {

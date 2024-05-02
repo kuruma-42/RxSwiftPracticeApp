@@ -25,6 +25,7 @@ struct TVListModel: Decodable {
 
 
 struct TV: Decodable, Hashable {
+    let id: Int
     let name: String
     let overview: String
     let posterURL: String
@@ -32,6 +33,7 @@ struct TV: Decodable, Hashable {
     let firstAirDate: String
     
     enum CodingKeys: String, CodingKey {
+        case id
         case name
         case overview
         case posterPath = "poster_path"
@@ -42,6 +44,7 @@ struct TV: Decodable, Hashable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.overview = try container.decode(String.self, forKey: .overview)
         let path = try container.decode(String.self, forKey: .posterPath)

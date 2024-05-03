@@ -8,9 +8,7 @@
 import Foundation
 struct ReviewListModel: Decodable {
     let page: Int
-    let result: [ReviewModel]
-    
-    
+    let results: [ReviewModel]
 }
 
 struct ReviewModel: Decodable, Hashable {
@@ -21,7 +19,7 @@ struct ReviewModel: Decodable, Hashable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case author = "author_detail"
+        case author = "author_details"
         case created_Date = "created_at"
         case content
     }
@@ -56,7 +54,11 @@ struct Reviewer: Decodable, Hashable {
         self.name = try container.decode(String.self, forKey: .name)
         self.username = try container.decode(String.self, forKey: .username)
         self.rating = try container.decode(Int.self, forKey: .rating)
-        let path = try container.decode(String.self, forKey: .imageURL)
-        self.imageURL = "https://image.tmdb.org/t/p/w500\(path)"
+        if let path = try container.decodeIfPresent(String.self, forKey: .imageURL) {
+            self.imageURL = "https://image.tmdb.org/t/p/w500\(path)"
+        } else {
+            self.imageURL = ""
+        }
+        
     }
 }

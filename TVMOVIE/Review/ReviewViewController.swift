@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class ReviewViewController: UIViewController {
-    
+    let viewModel: ReviewViewModel
+    private let disposeBag = DisposeBag()
     init(id: Int, contentType: ContentType) {
+        self.viewModel = ReviewViewModel(id: id, contentType: contentType)
         super.init(nibName: nil, bundle: nil)
             
     }
@@ -20,9 +23,21 @@ class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
+        bindView()
         // Do any additional setup after loading the view.
     }
     
+    private func bindView() {
+        let output = viewModel.transform(input: ReviewViewModel.Input())
+        output.reviewResult.bind { result in
+            switch result {
+            case .success(let reviewList):
+                print("review ::: \(reviewList)")
+            case .failure(let error):
+                print(error)
+            }
+        }.disposed(by: disposeBag)
+    }
 
     /*
     // MARK: - Navigation

@@ -10,7 +10,7 @@ import SnapKit
 import RxSwift
 
 // 레이아웃 기준으로 나눈다. 
-enum Section: Hashable {
+fileprivate enum Section: Hashable {
     case double
     case banner
     case horizontal(String)
@@ -19,7 +19,7 @@ enum Section: Hashable {
 
 
 // Cell을 기준으로 나누고
-enum Item: Hashable {
+fileprivate enum Item: Hashable {
     case normal(Content)
     case bigImage(Movie)
     case list(Movie)
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
                 let viewController = ReviewViewController(id: content.id, contentType: content.type)
                 navigationController.viewControllers = [viewController]
                 self?.present(navigationController, animated: true)
-                print(content)
+//                print(content)
             default:
                 print("default")
             }

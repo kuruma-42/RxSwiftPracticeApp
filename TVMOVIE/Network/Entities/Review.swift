@@ -53,7 +53,7 @@ struct Reviewer: Decodable, Hashable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decode(String.self, forKey: .name)
         self.username = try container.decode(String.self, forKey: .username)
-        self.rating = try container.decode(Int.self, forKey: .rating)
+        self.rating = try container.decodeIfPresent(Int.self, forKey: .rating) ?? 0
         if let path = try container.decodeIfPresent(String.self, forKey: .imageURL) {
             self.imageURL = "https://image.tmdb.org/t/p/w500\(path)"
         } else {

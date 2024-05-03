@@ -40,6 +40,8 @@
 		02B9B3BA2BE3A92B001E8810 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3B92BE3A92B001E8810 /* Review.swift */; };
 		02B9B3BC2BE3B3D4001E8810 /* ReviewNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3BB2BE3B3D4001E8810 /* ReviewNetwork.swift */; };
 		02B9B3BE2BE3B8E9001E8810 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3BD2BE3B8E9001E8810 /* ReviewViewModel.swift */; };
+		02B9B3C02BE4A613001E8810 /* ReviewHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9B3BF2BE4A613001E8810 /* ReviewHeaderCollectionViewCell.swift */; };
+		02E8AF8D2BE5002200E3DFD7 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8AF8C2BE5002200E3DFD7 /* ReviewCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		02B9B3B92BE3A92B001E8810 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		02B9B3BB2BE3B3D4001E8810 /* ReviewNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewNetwork.swift; sourceTree = "<group>"; };
 		02B9B3BD2BE3B8E9001E8810 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		02B9B3BF2BE4A613001E8810 /* ReviewHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		02E8AF8C2BE5002200E3DFD7 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 				02B9B3AC2BDCCC47001E8810 /* NormalCollectionViewCell.swift */,
 				02B9B3B02BE0FA45001E8810 /* BigImageCollectionViewCell.swift */,
 				02B9B3B22BE10BFC001E8810 /* ListCollectionViewCell.swift */,
+				02B9B3BF2BE4A613001E8810 /* ReviewHeaderCollectionViewCell.swift */,
+				02E8AF8C2BE5002200E3DFD7 /* ReviewCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -383,10 +389,12 @@
 				02B9B3A22BDA3453001E8810 /* TVNetwork.swift in Sources */,
 				02B9B3B12BE0FA45001E8810 /* BigImageCollectionViewCell.swift in Sources */,
 				02B9B3592BD64EA7001E8810 /* Const.swift in Sources */,
+				02B9B3C02BE4A613001E8810 /* ReviewHeaderCollectionViewCell.swift in Sources */,
 				02B9B3AA2BDA57D2001E8810 /* ViewModel.swift in Sources */,
 				02B9B3AF2BE0F564001E8810 /* Content.swift in Sources */,
 				02B9B3A42BDA3692001E8810 /* MovieNetwork.swift in Sources */,
 				02B9B35E2BD67B33001E8810 /* Movie.swift in Sources */,
+				02E8AF8D2BE5002200E3DFD7 /* ReviewCollectionViewCell.swift in Sources */,
 				02B9B3B32BE10BFC001E8810 /* ListCollectionViewCell.swift in Sources */,
 				02B9B3A62BDA398E001E8810 /* NetworkProvider.swift in Sources */,
 				02B9B31A2BD27D20001E8810 /* AppDelegate.swift in Sources */,
